@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+<h1 id="header">📝 Register Form</h1>
+
+        <div class="form-input">
+            <label class="header-form">ชื่อ</label>
+            <input class="form" name="firstname" type="text">
+        </div>
+
+        <div class="form-input">
+            <label class="header-form">นามสกุล</label>
+            <input class="form" name="lastname" type="text">
+        </div>
+
+        <div class="form-input">
+            <label class="header-form">อายุ</label>
+            <input class="form" name="age" type="number" min="0" max="100">
+        </div>
+
+        <div class="form-input">
+            <label class="header-form">เพศ</label>
+            <div class="radio-group">
+                <label><input name="gender" type="radio" value="ชาย"> ชาย</label>
+                <label><input name="gender" type="radio" value="หญิง"> หญิง</label>
+                <label><input name="gender" type="radio" value="ไม่ระบุ"> ไม่ระบุ</label>
+            </div>
+        </div>
+
+        <div class="form-input">
+            <label class="header-form">งานอดิเรก</label>
+            <div class="checkbox-group">
+                <label><input name="interest" type="checkbox" value="อ่านหนังสือ"> อ่านหนังสือ</label>
+                <label><input name="interest" type="checkbox" value="ดูหนัง"> ดูหนัง</label>
+                <label><input name="interest" type="checkbox" value="ฟังเพลง"> ฟังเพลง</label>
+            </div>
+        </div>
+
+        <div class="form-input">
+            <label class="header-form">คำอธิบาย</label>
+            <textarea name="description" class="form"></textarea>
+        </div>
+
+        <div id="message" class="message"></div>
+
+        <div class="center">
+            <button onclick="submitData()" class="button">🚀 ส่งข้อมูล</button>
+        </div>
+
+        <div class="center">
+            <a class="link-button" href="user.html">👥 go to user management </a>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
