@@ -7,11 +7,12 @@ window.onload = async () => {
 const loadData = async () => {
     const response = await axios.get(`${BASE_URL}/users`);
     const userDOM = document.getElementById('users');
+    let i= 0;
     userDOM.innerHTML = "";
-
     response.data.forEach(user => {
         const row = document.createElement('tr');
         row.innerHTML = `
+            <td>${++i}</td>
             <td>${user.firstname}</td>
             <td>${user.lastname}</td>
             <td>${user.age}</td>
